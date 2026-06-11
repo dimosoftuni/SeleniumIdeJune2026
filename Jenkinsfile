@@ -1,10 +1,9 @@
-pipeline{
-    agent{
-        label any
-    }
+pipeline {
+    agent any
+    
     stages{
         stage("Restore dependencies"){
-            steps{
+            steps {
                 bat "dotnet restore"
             }
         }
